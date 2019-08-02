@@ -40,7 +40,7 @@ k.times do
   patient = Patient.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name)
   patient.city = t_cities.sample #add city to patient
   patient.save
-  appointment = Appointment.create(datetime: Faker::Date.forward(days: 23),doctor: doctor, patient: patient)#create appointment
+  appointment = Appointment.create(date: Faker::Date.forward(days: 23), doctor: doctor, patient: patient)#create appointment
   appointment.city = t_cities.sample#add city to appointment
   appointment.save
   #add 2 specialties per doctor
